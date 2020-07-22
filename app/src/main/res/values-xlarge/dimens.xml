@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nombre_contacto">40dp</dimen>
+    <dimen name="telefono_contacto">30dp</dimen>
+    <dimen name="email_contacto">28dp</dimen>
+</resources>

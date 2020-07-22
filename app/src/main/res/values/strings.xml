@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MisContactos</string>
+    <string name="nombreContacto">Hector Morales</string>
+    <string name="telefonoContacto">9931651981</string>
+    <string name="emailContacto">himo123@gmail.com</string>
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">pemail</string>
+</resources>
