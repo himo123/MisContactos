@@ -22,18 +22,17 @@ public class MainActivity extends AppCompatActivity {
 
         contactos = new ArrayList<Contacto>();
 
-        contactos.add(new Contacto(R.drawable.himo,"Hector Morales", "9931-65-19-81", "himo123@hotmail.com"));
-        contactos.add(new Contacto(R.drawable.yuyi, "Yuridia Gonzalez", "9931-47-55-40", "yurimouse@hotmail.com"));
-        contactos.add(new Contacto(R.drawable.heygo,"Grupo Heygo", "9931-40-65-09", "grupo_heygo@hotmail.com"));
-        contactos.add(new Contacto(R.drawable.conchy,"Conchy Balcazar", "9933-51-13-26", "siluet_black@hotmail.com"));
+        contactos.add(new Contacto("Hector Morales", "9931-65-19-81", "himo123@hotmail.com"));
+        contactos.add(new Contacto("Yuridia Gonzalez", "9931-47-55-40", "yurimouse@hotmail.com"));
+        contactos.add(new Contacto("Grupo Heygo", "9931-40-65-09", "grupo_heygo@hotmail.com"));
+        contactos.add(new Contacto("Conchy Balcazar", "9933-51-13-26", "siluet_black@hotmail.com"));
 
         ArrayList<String> nombresContactos = new ArrayList<String>();
         for (Contacto contacto: contactos) {
             nombresContactos.add(contacto.getNombre());
         }
 
-        /*
-        ListView lstListaContactos = (ListView) findViewById(R.id.lstListaContactos);
+        ListView lstListaContactos = findViewById(R.id.lstListaContactos);
         lstListaContactos.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombresContactos));
         lstListaContactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intento);
                 finish();
             }
-        }); */
+        });
 
     }
 }
