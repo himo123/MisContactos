@@ -1,4 +1,4 @@
-package com.himo.miscontactos;
+package com.himo.miscontactosrv;
 
 import android.content.Context;
 
