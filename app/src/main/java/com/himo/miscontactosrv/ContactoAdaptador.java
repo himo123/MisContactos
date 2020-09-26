@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ Activity activity;
 
     public static class ContactoViewHolder extends RecyclerView.ViewHolder {
         private ImageView imgFoto;
+        private ImageButton btnLike;
         private TextView tvNombreCV;
         private TextView tvTelefonoCV;
         private TextView tvEmailCV;
@@ -34,6 +36,7 @@ Activity activity;
         public ContactoViewHolder(@NonNull View itemView) {
             super(itemView);
             imgFoto       = (ImageView) itemView.findViewById(R.id.imgFoto);
+            btnLike       = (ImageButton) itemView.findViewById(R.id.btnLike);
             tvNombreCV    = (TextView) itemView.findViewById(R.id.tvNombreCV);
             tvTelefonoCV  = (TextView) itemView.findViewById(R.id.tvTelefonoCV);
             tvEmailCV     = (TextView) itemView.findViewById(R.id.tvEmailCV);
@@ -63,6 +66,13 @@ Activity activity;
                 intento.putExtra(activity.getResources().getString(R.string.ptelefono), contacto.getTelefono());
                 intento.putExtra(activity.getResources().getString(R.string.pemail), contacto.getEmail());
                 activity.startActivity(intento);
+            }
+        });
+
+        holder.btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity, "Diste like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
             }
         });
     }
