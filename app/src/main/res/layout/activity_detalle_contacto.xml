@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="@dimen/left"
-    android:layout_marginTop="@dimen/top"
-    android:layout_marginRight="@dimen/left"
-    android:layout_marginBottom="@dimen/top"
     android:orientation="vertical"
     tools:context=".DetalleContacto">
+
+    <include
+        android:id="@+id/miActionBar"
+        layout="@layout/actionbar"></include>
 
     <TextView
         android:id="@+id/tvNombreContacto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left"
+        android:layout_marginTop="@dimen/top"
+        android:layout_marginRight="@dimen/left"
         android:text="@string/nombreContacto"
         android:textStyle="bold"
         android:textSize="@dimen/nombre_contacto">
@@ -24,7 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/left"
         android:layout_marginTop="@dimen/top"
+        android:layout_marginRight="@dimen/left"
         android:onClick="llamar">
 
         <ImageView
@@ -51,7 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/left"
         android:layout_marginTop="@dimen/top"
+        android:layout_marginRight="@dimen/left"
         android:onClick="mandarMail">
 
         <ImageView
